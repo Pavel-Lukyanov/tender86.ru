@@ -12,56 +12,91 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__left">
-            <a href="/">
-                <img src="./img/logo.png" alt="Логотип" />
-            </a>
-            <nav>
+    <header class="header__container">
+        <div class="header">
+            <div class="header__left">
+                <a href="/">
+                    <img src="./img/logo.png" alt="Логотип" />
+                </a>
+                <nav class="header__nav">
+                    <ul>
+                        <li>
+                            <a href="#about_us">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#examples">Проекты</a>
+                        </li>
+                        <li>
+                            <a href="#market">Рынок</a>
+                        </li>
+                        <li>
+                            <a href="#myths">Мифы о тендерах</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__right">
+                <div class="header__contact__container">
+                    <a class="header__tel" href="tel:89821479137"><span class="header__tel__icon"></span>8 (982)
+                        147-91-37</a>
+                    <!-- <a class="header__tel" href="tel:8(3462)666-022">8(3462) 666-022</a> -->
+                    <a class="header__email" href="mailto:tender_rus@list.ru">tender_rus@list.ru</a>
+                </div>
+                <button data-pointer="signup" class="header__btn">Перезвоните мне</button>
+            </div>
+            <button id="menuBtn" class="menu-btn nav-toggle">
+                <span class="bar-top"></span>
+                <span class="bar-mid"></span>
+                <span class="bar-bot"></span>
+            </button>
+        </div>
+        <div id="menuContainer" class="menu__container">
+            <nav class="menu__nav">
                 <ul>
                     <li>
-                        <a href="#about">О нас</a>
+                        <a href="#about_us">О нас</a>
                     </li>
                     <li>
-                        <a href="#about">Проекты</a>
+                        <a href="#examples">Проекты</a>
                     </li>
                     <li>
-                        <a href="#about">Рынок</a>
+                        <a href="#market">Рынок</a>
                     </li>
                     <li>
-                        <a href="#about">Мифы о тендерах</a>
+                        <a href="#myths">Мифы о тендерах</a>
                     </li>
                 </ul>
             </nav>
-        </div>
-        <div class="header__right">
-            <div class="header__contact__container">
-                <a class="header__tel" href="tel:+79063731878"><span class="header__tel__icon"></span>8 (906)
-                    373-18-78</a>
-                <a class="header__email" href="mailto:fomin@tenderkom.ru">fomin@tenderkom.ru</a>
+            <div class="">
+                <div class="header__contact__container">
+                    <a class="header__tel" href="tel:89821479137"><span class="header__tel__icon"></span>8 (982)
+                        147-91-37</a>
+                    <a class="header__tel" href="tel:8(3462)666-022">8(3462) 666-022</a>
+                    <a class="header__email" href="mailto:tender_rus@list.ru">tender_rus@list.ru</a>
+                </div>
+                <button data-pointer="signup" class="header__btn">Перезвоните мне</button>
             </div>
-            <button class="header__btn">Перезвоните мне</button>
         </div>
     </header>
     <section class="main">
         <div class="container">
             <div class="main__text">
                 <h1>
-                    Тендерный отдел по цене одного сотрудника<br>от 15 000 в месяц
+                    Тендерный отдел по цене одного сотрудника от <nobr>15 000</nobr> в месяц
                 </h1>
                 <p>
-                    Комплексное тендерное сопровождение<br>в государственных и коммерческих закупках.
+                    Комплексное тендерное сопровождение в государственных и коммерческих закупках.
                 </p>
-                <button>
-                    Оставь заявку – получи регистрацию<br> в ЕИС в подарок. Получить!
+                <button data-pointer="signup">
+                    Оставь заявку – получи регистрацию в ЕИС в подарок. Получить!
                 </button>
             </div>
         </div>
     </section>
-    <section class="container">
+    <section id="about_us" class="container">
         <h2>Эксперт по тендерам </h2>
         <div class="specialist">
-            <img src="/img/19337572.png" alt="Специалист">
+            <img src="/img/photo.png" alt="Специалист">
             <div class="spectialist__right">
                 <h3>Филипп Краснов </h3>
                 <div>
@@ -77,7 +112,7 @@
             </div>
         </div>
     </section>
-    <section class="examples">
+    <section id="examples" class="examples">
         <div class="container">
             <h2>Примеры выигранных контрактов</h2>
             <div class="examples__item">
@@ -86,15 +121,21 @@
                     <h3>
                         Поставка мобильных терминалов
                     </h3>
-                    <p>
-                        Заказчик..........................МБОУ СОШ
-                        <br>
-                        Стоимость.......................15 000 000,00₽
-                        <br>
-                        Прибыль..........................4 500 000,,00₽
-                        <br>
-                        Период окупаемости......60 дней
-                    </p>
+                    <div class="examples__text__container">
+                        <p><span>Заказчик</span><span class="examples__dotes"></span>
+                            <nobr>МБОУ СОШ</nobr>
+                        </p>
+                        <p><span>Стоимость</span><span class="examples__dotes"></span>
+                            <nobr>15 000 000,00₽</nobr>
+                        </p>
+                        <p><span>Прибыль</span><span class="examples__dotes"></span>
+                            <nobr>4 500 000,,00₽</nobr>
+                        </p>
+                        <p>
+                            <nobr>Период окупаемости</nobr><span class="examples__dotes"></span>
+                            <nobr>60 дней</nobr>
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="examples__item">
@@ -102,15 +143,21 @@
                     <h3>
                         Поставка современных средств информатизации
                     </h3>
-                    <p>
-                        Заказчик............................Администрация города Сургута
-                        <br>
-                        Стоимость.........................3 900 000,00₽
-                        <br>
-                        Прибыль............................1 400 000,00₽
-                        <br>
-                        Период окупаемости........45 дней
-                    </p>
+                    <div class="examples__text__container">
+                        <p><span>Заказчик</span><span class="examples__dotes"></span>
+                            Администрация города Сургута
+                        </p>
+                        <p><span>Стоимость</span><span class="examples__dotes"></span>
+                            <nobr>3 900 000,00₽</nobr></span></p>
+
+                        <p><span>Прибыль</span><span class="examples__dotes"></span>
+                            <nobr>1 400 000,00₽</nobr>
+                        </p>
+                        <p>
+                            <nobr>Период окупаемости</nobr><span class="examples__dotes"></span>
+                            <nobr>45 дней</nobr>
+                        </p>
+                    </div>
                 </div>
                 <img src="./img/mac.png" alt="Ноутбук">
             </div>
@@ -120,324 +167,396 @@
                     <h3>
                         Текущий ремонт технических помещений
                     </h3>
-                    <p>
-                        Заказчик..........................МУП «Горводоканал»
-                        <br>
-                        Стоимость.......................16 000 000,00₽
-                        <br>
-                        Прибыль..........................4 750 000,00₽
-                        <br>
-                        Период окупаемости.....90 дней
-                    </p>
+                    <div class="examples__text__container">
+                        <p><span>Заказчик</span><span class="examples__dotes"></span><nobr>МУП «Горводоканал»</nobr></p>
+                        <p><span>Стоимость</span><span class="examples__dotes"></span><nobr>16 000 000,00₽</nobr></p>
+                        <p><span>Прибыль</span><span class="examples__dotes"></span><nobr>4 750 000,00₽</nobr></p>
+                        <p><nobr>Период окупаемости</nobr><span class="examples__dotes"></span><nobr>90 дней</nobr></p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="tarrifs">
+    <!-- <section class="tarrifs">
         <div class="container">
             <h2> Тарифы</h2>
-            <table>
+            <table cellpadding="0" cellspacing="0" class="tarrifs__table">
                 <tr>
                     <th></th>
-                    <th>Знакомство с тендерными закупками</th>
-                    <th>Старт</th>
-                    <th>Оптимальный</th>
-                    <th>Прогрессивный</th>
-                    <th>Без предоплаты</th>
+                    <th>Тариф 1/Старт </th>
+                    <th>Тариф 2/Оптимальный </th>
+                    <th>Тариф 3/Бизнес </th>
+                    <th>Тариф 4/Бизнес Про</th>
+                    <th>Тариф 4/Бизнес Про+</th>
                 </tr>
                 <tr>
-                    <td>
-                        Поиск тендеров по критериям заказчика на 500+ площадках (А- стандартная, И-интеллек-туальная)
-                        /раз в неделю
+                    <td class="tarrifs__table__td">
+                        Срок действия тарифа
                     </td>
                     <td>
-                        А/2-3
+                        Услуга предоставляется единовременно
                     </td>
                     <td>
-                        А/2-3
+                        1 месяц 
                     </td>
                     <td>
-                        И/5
+                        3 месяца 
                     </td>
                     <td>
-                        И/5
+                        1 месяц
                     </td>
                     <td>
-                        И/5
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Количество заявок в месяц/ стоимость подготовки заявки сверх лимита в ₽
-                    </td>
-                    <td>
-                        0/от 2000₽
-                    </td>
-                    <td>
-                        10/от 2000₽
-                    </td>
-                    <td>
-                        20/от 1000₽
-                    </td>
-                    <td>
-                        30/0
-                    </td>
-                    <td>
-                        обязательство участвовать не менее 15/0
+                        3 месяца
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Ограничение по сроку работу по продукту
+                    <td class="tarrifs__table__td">
+                        Количество заявок в месяц
                     </td>
-                    <td>
-                        не более 3х месяцев
+                    <td class="tarrifs__table__td">
+                        1
                     </td>
-                    <td>
-                        не менее 2х месяцев
+                    <td class="tarrifs__table__td">
+                        до 10
                     </td>
-                    <td>
-                        не менее месяца
+                    <td class="tarrifs__table__td">
+                        до 30
                     </td>
-                    <td>
-                        не менее 6 месяцев
+                    <td class="tarrifs__table__td">
+                        до 10
                     </td>
-                    <td>
-                        нет ограничений
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Аккредитация на ЭТП
-                    </td>
-                    <td>
-                        платно
-                    </td>
-                    <td>
-                        входит в предложение
-                    </td>
-                    <td>
-                        входит в предложение
-                    </td>
-                    <td>
-                        входит в предложение
-                    </td>
-                    <td>
-                        платно
+                    <td class="tarrifs__table__td">
+                        до 30
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Вознаграждение в случае победы
+                    <td class="tarrifs__table__td">
+                        Закон
                     </td>
                     <td>
-                        3-5%
+                        44-ФЗ
                     </td>
                     <td>
-                        1-3%
+                        44-ФЗ/223-ФЗ
                     </td>
                     <td>
-                        1-3%
+                        44-ФЗ/223-ФЗ
                     </td>
                     <td>
-                        1%
+                        44-ФЗ/223-ФЗ/Коммерческие торги
                     </td>
                     <td>
-                        1-3%
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Выделенный проек. менеджер, отдельный рабочий чат в мессенджере
-                    </td>
-                    <td>
-                        нет/нет
-                    </td>
-                    <td>
-                        да/нет
-                    </td>
-                    <td>
-                        да/да
-                    </td>
-                    <td>
-                        да/да
-                    </td>
-                    <td>
-                        да/да
+                        44-ФЗ/223-ФЗ/Коммерческие торги
                     </td>
                 </tr>
                 <tr>
+                    <td class="tarrifs__table__td">
+                        Поиск тендеров по критериям
+                    </td>
+                    <td class="tarrifs__table__td">
+                        нет
+                    </td>
+                    <td class="tarrifs__table__td">
+                        2 раза  в неделю
+                    </td>
+                    <td class="tarrifs__table__td">
+                        2 раза в неделю
+                    </td>
+                    <td class="tarrifs__table__td">
+                        2 раза в неделю
+                    </td>
+                    <td class="tarrifs__table__td">
+                        2 раза в неделю
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tarrifs__table__td">
+                        Оформление КЭП
+                    </td>
                     <td>
+                        Да
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tarrifs__table__td">
+                        Регистрация в ЕИС
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        да
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tarrifs__table__td">
+                        Подача запроса на разъяснение
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tarrifs__table__td">
+                        Участие в аукционе
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tarrifs__table__td">
+                        Подписание контракта на ЭТП
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tarrifs__table__td">
                         Подбор кредитной организации и оформление банковской гарантии
                     </td>
-                    <td>
-                        да
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tarrifs__table__td">
+                        Сопровождение на этапе исполнения контракта
                     </td>
                     <td>
-                        да
+                        Нет
                     </td>
                     <td>
-                        да
+                        Да
                     </td>
                     <td>
-                        да
+                        Да
                     </td>
                     <td>
-                        да
+                        Да
+                    </td>
+                    <td>
+                        Да
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tarrifs__table__td">
+                        Электронное АКТирование
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Нет
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Да
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tarrifs__table__td">
+                        Стоимость тарифа
+                    </td>
+                    <td>
+                        10 000,00
+                    </td>
+                    <td>
+                        15 000,00
+                    </td>
+                    <td>
+                        40 000,00
+                    </td>
+                    <td>
+                        30 000,00
+                    </td>
+                    <td>
+                        80 000,00
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tarrifs__table__td">
+                        Вознаграждение в случае победы
+                    </td>
+                    <td class="tarrifs__table__td">
+                        Нет
+                    </td>
+                    <td class="tarrifs__table__td">
+                        от 1 %
+                    </td>
+                    <td class="tarrifs__table__td">
+                        от 1 %
+                    </td>
+                    <td class="tarrifs__table__td">
+                        от 1 %
+                    </td>
+                    <td class="tarrifs__table__td">
+                        от 1 %
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        Фикс плата входит вычитается из вознаграждения по факту победы
                     </td>
                     <td>
-                        да
+                        <button data-pointer="signup" class="table__btn">Оставить заявку</button>
                     </td>
                     <td>
-                        нет
+                        <button data-pointer="signup" class="table__btn">Оставить заявку</button>
                     </td>
                     <td>
-                        да
+                        <button data-pointer="signup" class="table__btn">Оставить заявку</button>
                     </td>
                     <td>
-                        да
+                        <button data-pointer="signup" class="table__btn">Оставить заявку</button>
                     </td>
                     <td>
-                        -
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Ограничение по сумме минимального контракта
-                    </td>
-                    <td>
-                        нет
-                    </td>
-                    <td>
-                        нет
-                    </td>
-                    <td>
-                        нет
-                    </td>
-                    <td>
-                        5 000 000 ₽
-                    </td>
-                    <td>
-                        5 000 000 ₽
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Особенности и спецпредложения
-                    </td>
-                    <td>
-                        -
-                    </td>
-                    <td>
-                        бонусом +1 месяц в случае активности в работе
-                    </td>
-                    <td>
-                        возможность приобрести снижение размера вознагра-ждения +20 000₽= макс процент 2%
-                    </td>
-                    <td>
-                        компанию ведет генеральный директор с опытом работы более 15 лет
-                    </td>
-                    <td>
-                        только для компаний из определенных отраслей экономики
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                    </td>
-                    <td>
-                        <button class="table__btn">Оставить заявку</button>
-                    </td>
-                    <td>
-                        <button class="table__btn">Оставить заявку</button>
-                    </td>
-                    <td>
-                        <button class="table__btn">Оставить заявку</button>
-                    </td>
-                    <td>
-                        <button class="table__btn">Оставить заявку</button>
+                        <button data-pointer="signup" class="table__btn">Оставить заявку</button>
                     </td>
                 </tr>
             </table>
         </div>
-    </section>
-    <section class="principles">
+    </section> -->
+    <!-- <section id="market" class="principles">
         <div class="container">
             <h2>Перечень основных услуг</h2>
-            <!-- <p>Основой работы является проектное Управление, где я разрабатываю и реализую персональную стратегию продвижения компании на тендерный рынок согласно разработанной мной методике 7 принципов гарантированной
-                победы (7П).</p> -->
             <div class="principles__container">
                 <div class="principles__item">
                     <h3>
-                        Коммерческое предложение
+                        Оформление квалифицированных электронных подписей (КЭП)
                     </h3>
                     <p>
-                        Вы получаете от нас актуальную подборку тендеров на данный момент. Расчет стоимости участия,
-                        расчет
-                        стоимости приготовления к участию.
+                        Сопровождение при оформлении электронной подписи:<br>
+                        - для участия в торгах по 44-ФЗ в качестве поставщика на площадках: Сбербанк-АСТ, ЕЭТП, АГЗРТ,
+                        НЭП, РТС тендер, РАД, ЭТП ГПБ и ТЭК-Торг;<br>
+                        - для решения основных задач бизнеса: отчетности через государственные порталы, подачи сведений,
+                        исков в арбитраж, взаимодействия с госорганами, организации закупок и других;<br>
+                        - для получения электронных услуг через портал госуслуг, работа на государственных электронных
+                        порталах, подача заявления на поступление в ВУЗ и др.
                     </p>
                 </div>
                 <div class="principles__item">
                     <h3>
-                        Заключение договора
+                        Аккредитация в Единой информационной системе в сфере закупок (ЕИС)
                     </h3>
                     <p>
-                        На данном этапе согласовываются все этапы и условия работы.
+                        Регистрация в Единой информационной системе и на электронных торговых площадках в соответствии с
+                        регламентом.
                     </p>
                 </div>
                 <div class="principles__item">
                     <h3>
-                        Подготовка к участию
+                        Подготовка заявок на участие в тендере
                     </h3>
                     <p>
-                        Оформление ЭЦП
-                        Регистрация на площадках
-                        Сбор необходимых документов
-                        Формирование критериев для участия
+                        Подготовка всех документов для участия в тендере 44-ФЗ , 223-ФЗ, 615- ПП РФ
                     </p>
                 </div>
                 <div class="principles__item">
-                    <h3>
-                        Подборка тендеров
+                    <h3 class="principles__item__margin">
+                        Комплексное тендерное сопровождение
                     </h3>
                     <p>
-                        Следующим этапом является ежедневный анализ и подбор тендеров по ранее согласованным параметрам
-                        для
-                        Вашего бизнеса. Конечное решение, в каких тендерах участвовать и по какой цене, принимаете
-                        только
-                        вы.
-                        Мы подготавливаем дополнительные документы для участия в закупке и подаём заявку после
-                        окончательного согласования условий Вашего предложения.
+                        Комплексное тендерное сопровождение подразумевает предоставление клиенту полного спектра услуг
+                        по участию в закупке
+                        <br>— от поиска торгов, до подписания контракта!
                     </p>
                 </div>
                 <div class="principles__item">
-                    <h3>
-                        Участие и выигрывание в тендере
+                    <h3 class="principles__item__margin">
+                        Оформление банковских гарантий
                     </h3>
                     <p>
-                        Вы получаете официальное подтверждение Вашей победы и контактные данные Заказчика для
-                        согласования
-                        условий выполнения контракта.<br>
-                        Мы полностью сопровождаем Вас на подписании контракта. Помогаем получить необходимую финансовую
-                        помощь и банковские гарантии.
+                        Поможем получить банковскую гарантию для обеспечения заявки, исполнения контракта и гарантийных
+                        обязательств на выгодных условиях
                     </p>
                 </div>
                 <div class="principles__item">
-                    <h3>
-                        Новый контакт
+                    <h3 class="principles__item__margin">
+                        Анализ тендерной отрасли
                     </h3>
                     <p>
-                        Цепочка запускается заново
+                        Анализ тендерной отрасли в вашей сфере бизнеса
                     </p>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="contact">
+    </section> -->
+    <!-- <section class="contact">
         <div class="container">
             <h2>
                 Связаться
@@ -448,21 +567,21 @@
             <form class="contact__form" action="" method="POST">
                 <label>
                     Ваше имя *
-                    <input type="text" name="name">
+                    <input required type="text" name="name">
                 </label>
                 <label>
                     Телефон *
-                    <input type="text" name="name">
+                    <input required type="tel" name="name">
                 </label>
                 <label>
                     Коментарий к заказу
-                    <input type="text" name="name">
+                    <input required type="text" name="name">
                 </label>
                 <button type="submit">Отправить</button>
             </form>
         </div>
-    </section>
-    <section class="myths">
+    </section> -->
+    <!-- <section id="myths" class="myths">
         <div class="container">
             <h2>5 мифов о тендерах</h2>
             <p>Разбиваем мифы, из-за которых бизнес не участвует в тендерах</p>
@@ -519,8 +638,8 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="question">
+    </section> -->
+    <!-- <section class="question">
         <div class="container">
             <h2>
                 Есть вопросы?
@@ -529,51 +648,52 @@
             <form class="question__form" action="" method="POST">
                 <label>
                     Ваше имя *
-                    <input type="text" name="name">
+                    <input required minlength="2" type="text" name="name">
                 </label>
                 <label>
                     Телефон *
-                    <input type="text" name="name">
+                    <input required type="tel" name="name">
                 </label>
                 <button type="submit">Отправить</button>
             </form>
         </div>
-    </section>
-    <section class="assets">
+    </section> -->
+    <!-- <section class="assets">
         <div class="container">
+            <h2>Результаты работы:</h2>
             <div class="assets__container">
                 <div class="assets__item">
                     <h3>
-                        Более 800
+                        Более 500 млн.
                     </h3>
-                    <div></div>
-                    <p>Выигранных тендеров</p>
+                    <hr>
+                    <p>Сумма заключенных контрактов </p>
                 </div>
                 <div class="assets__item">
                     <h3>
                         98%
                     </h3>
-                    <div></div>
-                    <p>Работы берут на себя наши специалисты</p>
+                    <hr>
+                    <p>Работы беру на себя</p>
                 </div>
                 <div class="assets__item">
                     <h3>
-                        Более 1500
+                        Более 100
                     </h3>
-                    <div></div>
+                    <hr>
                     <p>Довольных клиентов</p>
                 </div>
                 <div class="assets__item">
                     <h3>
-                        15 лет
+                        8 лет
                     </h3>
-                    <div></div>
-                    <p>Успешной практики с государственными организациями</p>
+                    <hr>
+                    <p>Успешной работы с государственными и коммерческими заказчиками</p>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="free__tender">
+    </section> -->
+    <!-- <section class="free__tender">
         <div class="container">
             <h2>
                 Получить бесплатную подборку тендеров
@@ -581,36 +701,59 @@
             <form class="free__tender__form" action="" method="POST">
                 <label>
                     Ваше имя *
-                    <input type="text" name="name">
+                    <input required minlength="2" type="text" name="name">
                 </label>
                 <label>
                     Телефон *
-                    <input type="text" name="name">
+                    <input required type="text" name="name">
                 </label>
                 <button type="submit">Отправить</button>
             </form>
         </div>
-    </section>
+    </section> -->
     <footer class="footer">
-        <div class="container">
+        <div class="container footer__container">
             <div class="footer__left">
-                <a href="/"></a>
+                <a href="/"><img src="./img/logo.png" alt="Логотип" /></a>
                 <div class="footer__left__txt">
-                    <p>ООО "Центр поддержки участников государственных</p>
-                    <p>и муниципальных закупок".&nbsp;</p>
-                    <p>ИНН: 0273098267</p>
-                    <p>ОГРН: 1140280052912</p>
-                    <p>© 2014-2020, TenderKOm</p>
+                    <p>Консалтинговое агентство "Югратендергрупп".</p>
+                    <p>
+                        г. Сургут, ул. Маяковского, д. 21а, офис 111.
+                    </p>
                 </div>
             </div>
             <div class="footer__right">
-                <a class="footer__tel" href="tel:+7 (906) 373-18-78"><span class="footer__tel__icon"></span>+7 (906)
-                    373-18-78</a>
-                <a class="footer__email" href="mailto:fomin@tenderkom.ru">fomin@tenderkom.ru</a>
-                <button class="footer__btn"> Оставить заявку</button>
+                <a class="footer__tel" href="tel:89821479137"><span class="footer__tel__icon"></span>8 (982)
+                    147-91-37</a>
+                <a class="footer__tel" href="tel:8(3462)666-022">8(3462) 666-022</a>
+                <a class="footer__email" href="mailto:tender_rus@list.ru">tender_rus@list.ru</a>
+                <button data-pointer="signup" class="footer__btn"> Оставить заявку</button>
             </div>
         </div>
     </footer>
+
+
+    <div id="signup" class="popup">
+        <div class="popup__container">
+            <div class="popup__content">
+                <form class="popup__form">
+                    <h3>Оформить заявку</h3>
+                    <label>
+                        Имя *
+                        <input minlength="2" required type="text">
+                    </label>
+                    <label>
+                        Телефон *
+                        <input required type="tel">
+                    </label>
+                    <button class="btn">Отправить</button>
+                </form>
+            </div>
+            <button class="popup__close">&#10006;</button>
+        </div>
+    </div>
+    <script src="./js/inputmask.min.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
