@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const form1 = document.querySelector('#form1')
     form1.addEventListener('submit', (e) => {
         e.preventDefault()
-        fetch('send.php', {
+        fetch('contact.php', {
             method: 'POST',
             body: new FormData(form1)
         }).then((res) => res.json()).then(result => {
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const form2 = document.querySelector('#form2')
     form2.addEventListener('submit', (e) => {
         e.preventDefault()
-        fetch('send.php', {
+        fetch('question.php', {
             method: 'POST',
             body: new FormData(form2)
         }).then((res) => res.json()).then(result => {
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const form3 = document.querySelector('#form3')
     form3.addEventListener('submit', (e) => {
         e.preventDefault()
-        fetch('send.php', {
+        fetch('freeTender.php', {
             method: 'POST',
             body: new FormData(form3)
         }).then((res) => res.json()).then(result => {
@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const form4 = document.querySelector('#form4')
     form4.addEventListener('submit', (e) => {
         e.preventDefault()
-        fetch('send.php', {
+        fetch('freeTender.php', {
             method: 'POST',
             body: new FormData(form4)
         }).then((res) => res.json()).then(result => {

@@ -20,6 +20,7 @@ html {
 .header__container {
     background-color: #FFFFFF;
     width: 100%;
+    position: fixed;
 }
 
 .header__left {
@@ -1129,7 +1130,7 @@ th {
     }
 
     .main__text {
-        padding-top: 70px;
+        padding-top: 135px;
         padding-bottom: 70px;
     }
 
