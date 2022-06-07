@@ -259,11 +259,15 @@ h2 {
     line-height: 1.37;
     font-family: "Roboto", sans-serif;
     color: #1b1b1c;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .principles h2 {
     margin-bottom: 50px;
+}
+
+.principles {
+    margin-bottom: 40px;
 }
 
 .principles__item h3 {
@@ -272,12 +276,8 @@ h2 {
     line-height: 1.2;
     font-family: "Roboto", sans-serif;
     color: #1b1b1c;
-    margin-bottom: 15px;
-    height: 80px;
-}
-
-.principles__item__margin {
-    height: 50px !important;
+    min-height: 80px;
+    padding-bottom: 20px;
 }
 
 .principles__item p {
@@ -288,10 +288,14 @@ h2 {
     color: #1b1b1c;
 }
 
+.mobile__table {
+    display: none;
+}
+
 .principles__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 50px;
 }
 
 .tarrifs__table {
@@ -302,6 +306,8 @@ h2 {
     color: #1b1b1c;
     text-align: center;
     border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
 }
 
 .tarrifs__table button {
@@ -316,7 +322,6 @@ h2 {
     padding: 12px 20px;
     cursor: pointer;
     transition: ease-in-out 0.2s;
-    width: 150px;
 }
 
 .tarrifs__table button:hover {
@@ -324,14 +329,11 @@ h2 {
     transition: ease-in-out 0.3s;
 }
 
-.tarrifs__table td {
-    padding: 15px;
-}
-
 td,
 th {
     border: 1px solid #EAEBEB;
     padding: 15px;
+    width: 100%;
 }
 
 .tarrifs__table th {
@@ -346,8 +348,7 @@ th {
     background-color: transparent;
     background-image: url(../img/contacts_background.png);
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 0px -380px;
+    background-position: center -380px;
 }
 
 .contact h2 {
@@ -433,17 +434,17 @@ th {
 }
 
 .myths__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 26px;
     flex-wrap: wrap;
 }
 
 .myths__item img {
-    max-width: 209px;
+    width: 100%;
 }
 
 .myths__item {
-    max-width: 209px;
     background-color: rgba(242, 246, 250, 0.56);
     display: flex;
     flex-direction: column;
@@ -471,10 +472,7 @@ th {
 }
 
 .question {
-    background-color: transparent;
-    background-image: url(../img/questions_background.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background: linear-gradient(73.22deg, #5762D3 0%, #056C9F 30.13%, #007B5D 75.25%, #008C00 99.76%);
 }
 
 .question h2 {
@@ -560,6 +558,7 @@ th {
     font-family: "Roboto", sans-serif;
     margin-bottom: 20px;
     text-align: center;
+    white-space: nowrap;
 }
 
 .assets__item hr {
@@ -567,6 +566,7 @@ th {
     width: 50%;
     background-color: #3d7887;
     margin-bottom: 20px;
+    width: 125px;
 }
 
 .assets__item p {
@@ -582,6 +582,7 @@ th {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .assets {
@@ -594,11 +595,7 @@ th {
 }
 
 .free__tender {
-    background-color: transparent;
-    background-image: url(../img/free_background.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 0px -100px;
+    background: linear-gradient(73.22deg, #5762D3 0%, #056C9F 30.13%, #007B5D 75.25%, #008C00 99.76%);
 }
 
 .free__tender__form {
@@ -630,6 +627,7 @@ th {
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .free__tender__form input {
@@ -972,7 +970,31 @@ th {
     }
 }
 
+@media(max-width: 1150px) {
+    .myths__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(max-width: 1050px) {
+
+    .principles__item h3 {
+        min-height: 0px;
+        line-height: 1;
+    }
+
+    .principles__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media(max-width: 1024px) {
+
+    .assets__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
 
     .specialist {
         flex-direction: column;
@@ -985,8 +1007,21 @@ th {
     }
 
 }
- 
+
 @media(max-width: 968px) {
+
+    .tarrifs__table {
+        display: none;
+    }
+
+    .mobile__table {
+        display: table;
+        margin-bottom: 30px;
+    }
+
+    .contact h2 {
+        font-size: 48px;
+    }
 
     h2 {
         font-size: 48px;
@@ -1071,9 +1106,113 @@ th {
     .main__text p {
         max-width: 570px;
     }
+
+    .myths__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media(max-width: 768px) {
+
+    .principles h2 {
+        padding-top: 60px;
+    }
+
+    .free__tender h2 {
+        font-size: 32px;
+        padding-top: 70px;
+    }
+
+    .free__tender__form {
+        align-items: center;
+        max-width: 450px;
+    }
+
+    .free__tender__form button {
+        width: 100%;
+    }
+
+    .free__tender__form {
+        flex-direction: column;
+    }
+
+    .free__tender__form label {
+        width: 100%;
+    }
+
+    .free__tender__form input {
+        width: 100%;
+    }
+
+    .assets__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .question h2 {
+        font-size: 32px;
+        padding-top: 70px;
+        text-align: center;
+    }
+
+    .question__form {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 450px;
+        margin: auto;
+    }
+
+    .question__form input {
+        width: 100%;
+        box-sizing: border-box;
+        height: 46px;
+    }
+
+    .question p {
+        font-size: 18px;
+        max-width: 450px;
+        margin: auto;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .myths__item h3 {
+        padding: 30px 15px;
+    }
+
+    .myths__item p {
+        padding: 0px 15px 30px 15px;
+    }
+
+    .myths__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .myths p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .contact__form {
+        margin: auto;
+    }
+
+    .contact {
+        background-position: -150px -380px;
+    }
+
+    .contact p {
+        font-size: 18px;
+        text-align: center;
+        max-width: 450px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .contact h2 {
+        text-align: center;
+        padding-top: 70px;
+        font-size: 32px;
+    }
 
     .spectialist__right p {
         line-height: 1;
@@ -1082,7 +1221,7 @@ th {
     .spectialist__right div {
         line-height: 1;
     }
-    
+
     .spectialist__right h3 {
         font-size: 24px;
     }
@@ -1107,13 +1246,121 @@ th {
     }
 }
 
+@media(max-width: 640px) {
+    .principles__container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .principles__item h3 {
+        font-size: 20px;
+    }
+
+    .principles p {
+        margin-bottom: 20px;
+    }
+}
+
 @media(max-width: 586px) {
     .examples__item img {
         width: 100%;
     }
 }
 
+@media(max-width: 570px) {
+
+    .assets__item p {
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer__right {
+        text-align: center;
+    }
+
+    .footer__email {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer__tel {
+        justify-content: center;
+    }
+
+    .footer__tel__icon {
+        display: none;
+    }
+
+    .footer__btn {
+        margin: auto;
+    }
+
+    .assets__item h3 {
+        margin-bottom: 0;
+        font-size: 22px;
+    }
+
+    .assets__item hr {
+        margin-bottom: 8px;
+        height: 1px;
+    }
+
+    .assets__container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+}
+
+@media(max-width: 460px) {
+    .myths__container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 @media(max-width: 425px) {
+
+    .principles h2 {
+        margin-bottom: 30px;
+    }
+
+    .free__tender h2 {
+        font-size: 26px;
+        line-height: 1;
+    }
+
+    .container h2 {
+        text-align: start;
+    }
+
+    .question p {
+        text-align: start;
+    }
+
+    .contact p {
+        text-align: start;
+    }
+
+    .contact h2 {
+        text-align: start;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    .examples__item h3 {
+        line-height: 1;
+        font-size: 18px;
+    }
+
+    .examples__item p {
+        font-size: 14px;
+    }
 
     .container h2 {
         padding-top: 70px;
@@ -1139,33 +1386,15 @@ th {
     }
 }
 
-@media(max-width: 570px) {
-
-    .footer__container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
+@media(max-width: 375px) {
+    .myths__container {
+        padding: 0px;
     }
+}
 
-    .footer__right {
-        text-align: center;
-    }
+@media(max-width: 325px) {
 
-    .footer__email {
-        text-align: center;
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    .footer__tel {
-        justify-content: center;
-    }
-
-    .footer__tel__icon {
-        display: none;
-    }
-    
-    .footer__btn {
-        margin: auto;
+    .examples__item p {
+        font-size: 13px;
     }
 }
