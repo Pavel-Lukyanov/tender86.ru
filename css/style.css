@@ -1326,6 +1326,10 @@ th {
 
 @media(max-width: 425px) {
 
+    .assets h2 {
+        text-align: center;
+    }
+
     .principles h2 {
         margin-bottom: 30px;
     }
@@ -1358,9 +1362,9 @@ th {
         font-size: 14px;
     }
 
-    .container h2 {
+    .examples h2 {
         padding-top: 50px;
-        text-align: center;
+        text-align: start;
     }
 
     h2 {
