@@ -1185,20 +1185,20 @@
             <p>
                 Отправьте контакты и мы свяжемся с вами для уточнения деталей.
             </p>
-            <form class="contact__form" action="" method="POST">
+            <form id="form1" autocomplete="off" class="contact__form" action="#" method="POST">
                 <label>
                     Ваше имя *
-                    <input required type="text" name="name">
+                    <input required minlength="2" id="inputName1" class="contact__input" type="text" name="name">
                 </label>
                 <label>
                     Телефон *
-                    <input required type="tel" name="name">
+                    <input required id="phone1" class="contact__input" type="tel" name="tel">
                 </label>
                 <label>
                     Коментарий к заказу
-                    <input required type="text" name="name">
+                    <input type="text" name="comment">
                 </label>
-                <button type="submit">Отправить</button>
+                <button disabled id="formSumbit1" type="submit">Отправить</button>
             </form>
         </div>
     </section>
@@ -1266,16 +1266,16 @@
                 Есть вопросы?
             </h2>
             <p>Оставьте заявку прямо сейчас и мы свяжемся с вами ближайшее время!</p>
-            <form class="question__form" action="" method="POST">
+            <form class="question__form" action="#" id="form2" method="POST">
                 <label>
                     Ваше имя *
-                    <input required minlength="2" type="text" name="name">
+                    <input class="questions__input" required minlength="2" type="text" name="name">
                 </label>
                 <label>
                     Телефон *
-                    <input required type="tel" name="name">
+                    <input class="questions__input" required type="tel" id="phone2" name="name">
                 </label>
-                <button type="submit">Отправить</button>
+                <button disabled id="formSumbit2" type="submit">Отправить</button>
             </form>
         </div>
     </section>
@@ -1319,16 +1319,16 @@
             <h2>
                 Получить бесплатную подборку тендеров
             </h2>
-            <form class="free__tender__form" action="" method="POST">
+            <form autocomplete="off" class="free__tender__form" action="#" id="form3" method="POST">
                 <label>
                     Ваше имя *
-                    <input required minlength="2" type="text" name="name">
+                    <input class="free__tender__input" required minlength="2" type="text" name="name">
                 </label>
                 <label>
                     Телефон *
-                    <input required type="text" name="name">
+                    <input class="free__tender__input" required id="phone3" type="tel" name="name">
                 </label>
-                <button type="submit">Отправить</button>
+                <button disabled id="formSumbit3" type="submit">Отправить</button>
             </form>
         </div>
     </section>
@@ -1357,17 +1357,17 @@
     <div id="signup" class="popup">
         <div class="popup__container">
             <div class="popup__content">
-                <form class="popup__form">
+                <form autocomplete="off" action="#" id="form4" class="popup__form">
                     <h3>Оформить заявку</h3>
                     <label>
                         Имя *
-                        <input minlength="2" required type="text">
+                        <input class="make__request" minlength="2" required type="text">
                     </label>
                     <label>
                         Телефон *
-                        <input required type="tel">
+                        <input class="make__request" id="phone4" required type="tel">
                     </label>
-                    <button class="btn">Отправить</button>
+                    <button id="formSumbit4" class="btn">Отправить</button>
                 </form>
             </div>
             <button class="popup__close">&#10006;</button>

@@ -422,6 +422,11 @@ th {
     font-family: "Roboto", sans-serif;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    opacity: 0.4;
+}
+
+.contact__form button:disabled {
+    cursor: not-allowed;
 }
 
 .contact__form button:hover {
@@ -549,6 +554,11 @@ th {
     font-family: "Roboto", sans-serif;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    opacity: 0.4;
+}
+
+.question__form button:disabled {
+    cursor: not-allowed;
 }
 
 .question__form button:hover {
@@ -667,6 +677,11 @@ th {
     font-family: "Roboto", sans-serif;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    opacity: 0.4;
+}
+
+.free__tender__form button:disabled {
+    cursor: not-allowed;
 }
 
 .free__tender__form button:hover {
@@ -856,6 +871,11 @@ th {
     padding: 12px 20px;
     cursor: pointer;
     transition: ease-in-out 0.2s;
+    opacity: 0.4;
+}
+
+.popup__form button:disabled {
+    cursor: not-allowed;
 }
 
 .popup__form button:hover {
