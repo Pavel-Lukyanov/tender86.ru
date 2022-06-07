@@ -878,7 +878,7 @@ th {
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    max-width: 290px;
+    width: 320px;
 }
 
 .menu__container {
@@ -1326,6 +1326,10 @@ th {
 
 @media(max-width: 425px) {
 
+    .popup__form {
+        width: auto;
+    }
+
     .assets h2 {
         text-align: center;
     }
@@ -1384,6 +1388,10 @@ th {
         padding: 5px;
         line-height: 1;
         font-size: 14px;
+    }
+
+    .popup__form {
+        max-width: 400px;
     }
 }
 
