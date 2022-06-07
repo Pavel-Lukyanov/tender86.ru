@@ -20,7 +20,6 @@ html {
 .header__container {
     background-color: #FFFFFF;
     width: 100%;
-    /* position: fixed; */
 }
 
 .header__left {
@@ -42,9 +41,24 @@ html {
     margin-right: 24px;
 }
 
-.header__left a {
+.header__left ul li a {
     font-family: "Roboto", sans-serif;
     color: #1b1b1c;
+    position: relative;
+}
+
+.header__left ul li a::before {
+	content: '';
+	position: absolute;
+	left: 0; bottom: -5px;
+	width: 0%;
+	height: 1.5px;
+	background-color: #323233;
+    transition: width 0.35s;
+}
+
+.header__left ul li a:hover:before {
+	width: 100%;
 }
 
 .header__btn {
