@@ -239,6 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
 
+    
     //Анимация букв в "Перечень оновных услуг"
 
     let cardHeads = document.querySelectorAll('.animate');
@@ -254,9 +255,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     arr[i] = `<span>${arr[i]}</span>`;
                     cardHead.innerHTML += arr[i];
                 }
-            }, 500);
+            }, 600);
         }
     }
+
+
 
     //Получение координат элементов для запуска отрисовки
 
@@ -275,20 +278,22 @@ document.addEventListener("DOMContentLoaded", function () {
                     top: window.pageYOffset,
                     bottom: window.pageYOffset + document.documentElement.clientHeight
                 };
-                //Проверка видимости элемента в окне
+            //Проверка видимости элемента в окне
             if (targetPosition.top > windowPosition.top &&
                 targetPosition.bottom < windowPosition.bottom) {
                 if (flag != 1) {
                     render();
                     flag = 1
                 }
-            }
-            console.log('окно верх ' + windowPosition.top)
+            } /* else {
+                flag = 0;
+            } */
+            /* console.log('окно верх ' + windowPosition.top)
 
             console.log('окно низ ' + windowPosition.bottom)
 
             console.log('цель верх ' + targetPosition.top)
-            console.log('цель низ ' + targetPosition.bottom)
+            console.log('цель низ ' + targetPosition.bottom) */
         };
 
 
@@ -298,7 +303,7 @@ document.addEventListener("DOMContentLoaded", function () {
             Visible(element);
         });
 
-        // А также запустим функцию сразу. А то вдруг, элемент изначально видно
+        // Запустим функцию сразу. Вдруг, элемент изначально видно
         Visible(element);
 
     }
@@ -308,3 +313,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+/* for (let cardHead of cardHeads) {
+    let arr = cardHead.textContent.split('');
+    cardHead.innerHTML = '';
+    //С задержкой отрисовываем текст
+    setTimeout(() => {
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = `<span>${arr[i]}</span>`;
+            cardHead.innerHTML += arr[i];
+        }
+    }, 500);
+} */
