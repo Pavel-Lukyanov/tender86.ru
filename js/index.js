@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     arr[i] = `<span>${arr[i]}</span>`;
                     cardHead.innerHTML += arr[i];
                 }
-            }, 800);
+            }, 500);
         }
     }
 
@@ -275,16 +275,23 @@ document.addEventListener("DOMContentLoaded", function () {
                     top: window.pageYOffset,
                     bottom: window.pageYOffset + document.documentElement.clientHeight
                 };
-
-            if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-                targetPosition.top < windowPosition.bottom) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-                // Если элемент полностью видно, то запускаем следующий код через флаг, чтобы при загрузке страницы анимация отработала 1 раз
+                //Проверка видимости элемента в окне
+            if (targetPosition.top > windowPosition.top &&
+                targetPosition.bottom < windowPosition.bottom) {
                 if (flag != 1) {
                     render();
                     flag = 1
                 }
             }
+            console.log('окно верх ' + windowPosition.top)
+
+            console.log('окно низ ' + windowPosition.bottom)
+
+            console.log('цель верх ' + targetPosition.top)
+            console.log('цель низ ' + targetPosition.bottom)
         };
+
+
 
         // Запускаем функцию при прокрутке страницы
         window.addEventListener('scroll', function () {
