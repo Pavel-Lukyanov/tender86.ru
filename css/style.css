@@ -21,6 +21,7 @@ html {
     background-color: #FFFFFF;
     width: 100%;
     position: fixed;
+    z-index: 2;
 }
 
 .header__left {
@@ -286,7 +287,8 @@ h2 {
 }
 
 .principles {
-    margin-bottom: 40px;
+    padding-bottom: 60px;
+    background-color: #F2F6FA;
 }
 
 .principles__item h3 {
@@ -315,6 +317,10 @@ h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
+}
+
+.tarrifs {
+    padding-bottom: 115px;
 }
 
 .tarrifs__table {
@@ -1153,6 +1159,10 @@ th {
 
 @media(max-width: 768px) {
 
+    .tarrifs {
+        padding-bottom: 60px;
+    }
+
     .principles h2 {
         padding-top: 60px;
     }
@@ -1444,5 +1454,355 @@ th {
 
     .examples__item p {
         font-size: 13px;
+    }
+}
+
+/* animation letter */
+
+.animate span:nth-of-type(2) {
+    animation-delay: .02s;
+}
+
+.animate span:nth-of-type(3) {
+    animation-delay: .04s;
+}
+
+.animate span:nth-of-type(4) {
+    animation-delay: .06s;
+}
+
+.animate span:nth-of-type(5) {
+    animation-delay: .08s;
+}
+
+.animate span:nth-of-type(6) {
+    animation-delay: .10s;
+}
+
+.animate span:nth-of-type(7) {
+    animation-delay: .12s;
+}
+
+.animate span:nth-of-type(8) {
+    animation-delay: .14s;
+}
+
+.animate span:nth-of-type(9) {
+    animation-delay: .16s;
+}
+
+.animate span:nth-of-type(10) {
+    animation-delay: .18s;
+}
+
+.animate span:nth-of-type(11) {
+    animation-delay: .20s;
+}
+
+.animate span:nth-of-type(12) {
+    animation-delay: .22s;
+}
+
+.animate span:nth-of-type(13) {
+    animation-delay: .24s;
+}
+
+.animate span:nth-of-type(14) {
+    animation-delay: .26s;
+}
+
+.animate span:nth-of-type(15) {
+    animation-delay: .28s;
+}
+
+.animate span:nth-of-type(16) {
+    animation-delay: .30s;
+}
+
+.animate span:nth-of-type(17) {
+    animation-delay: .32s;
+}
+
+.animate span:nth-of-type(18) {
+    animation-delay: .34s;
+}
+
+.animate span:nth-of-type(19) {
+    animation-delay: .36s;
+}
+
+.animate span:nth-of-type(20) {
+    animation-delay: .38s;
+}
+
+.animate span:nth-of-type(21) {
+    animation-delay: .40s;
+}
+
+.animate span:nth-of-type(22) {
+    animation-delay: .42s;
+}
+
+.animate span:nth-of-type(23) {
+    animation-delay: .44s;
+}
+
+.animate span:nth-of-type(24) {
+    animation-delay: .46s;
+}
+
+.animate span:nth-of-type(25) {
+    animation-delay: .48s;
+}
+
+.animate span:nth-of-type(26) {
+    animation-delay: .50s;
+}
+
+.animate span:nth-of-type(27) {
+    animation-delay: .52s;
+}
+
+.animate span:nth-of-type(28) {
+    animation-delay: .54s;
+}
+
+.animate span:nth-of-type(29) {
+    animation-delay: .56s;
+}
+
+.animate span:nth-of-type(30) {
+    animation-delay: .58s;
+}
+
+.animate span:nth-of-type(31) {
+    animation-delay: .60s;
+}
+
+.animate span:nth-of-type(32) {
+    animation-delay: .62s;
+}
+
+.animate span:nth-of-type(33) {
+    animation-delay: .64s;
+}
+
+.animate span:nth-of-type(34) {
+    animation-delay: .66s;
+}
+
+.animate span:nth-of-type(35) {
+    animation-delay: .68s;
+}
+
+.animate span:nth-of-type(36) {
+    animation-delay: .70s;
+}
+
+.animate span:nth-of-type(37) {
+    animation-delay: .72s;
+}
+
+.animate span:nth-of-type(38) {
+    animation-delay: .74s;
+}
+
+.animate span:nth-of-type(39) {
+    animation-delay: .76s;
+}
+
+.animate span:nth-of-type(40) {
+    animation-delay: .78s;
+}
+
+.animate span:nth-of-type(41) {
+    animation-delay: .80s;
+}
+
+.animate span:nth-of-type(42) {
+    animation-delay: .82s;
+}
+
+.animate span:nth-of-type(43) {
+    animation-delay: .84s;
+}
+
+.animate span:nth-of-type(44) {
+    animation-delay: .86s;
+}
+
+.animate span:nth-of-type(45) {
+    animation-delay: .88s;
+}
+
+.animate span:nth-of-type(46) {
+    animation-delay: .90s;
+}
+
+.animate span:nth-of-type(47) {
+    animation-delay: .92s;
+}
+
+.animate span:nth-of-type(48) {
+    animation-delay: .94s;
+}
+
+.animate span:nth-of-type(49) {
+    animation-delay: .96s;
+}
+
+.animate span:nth-of-type(50) {
+    animation-delay: .98s;
+}
+
+.animate span:nth-of-type(51) {
+    animation-delay: 1.02s;
+}
+
+.animate span:nth-of-type(52) {
+    animation-delay: 1.04s;
+}
+
+.animate span:nth-of-type(53) {
+    animation-delay: 1.06s;
+}
+
+.animate span:nth-of-type(54) {
+    animation-delay: 1.08s;
+}
+
+.animate span:nth-of-type(55) {
+    animation-delay: 1.10s;
+}
+
+.animate span:nth-of-type(56) {
+    animation-delay: 1.12s;
+}
+
+.animate span:nth-of-type(57) {
+    animation-delay: 1.14s;
+}
+
+.animate span:nth-of-type(58) {
+    animation-delay: 1.16s;
+}
+
+.animate span:nth-of-type(59) {
+    animation-delay: 1.18s;
+}
+
+.animate span:nth-of-type(60) {
+    animation-delay: 1.20s;
+}
+
+.animate span:nth-of-type(61) {
+    animation-delay: 1.22s;
+}
+
+.animate span:nth-of-type(62) {
+    animation-delay: 1.24s;
+}
+
+.animate span:nth-of-type(63) {
+    animation-delay: 1.26s;
+}
+
+.animate span:nth-of-type(64) {
+    animation-delay: 1.28s;
+}
+
+.animate span:nth-of-type(65) {
+    animation-delay: 1.30s;
+}
+
+.animate span:nth-of-type(66) {
+    animation-delay: 1.32s;
+}
+
+.animate span:nth-of-type(67) {
+    animation-delay: 1.34s;
+}
+
+.animate span:nth-of-type(68) {
+    animation-delay: 1.36s;
+}
+
+.animate span:nth-of-type(69) {
+    animation-delay: 1.38s;
+}
+
+.animate span:nth-of-type(70) {
+    animation-delay: 1.40s;
+}
+
+.animate span:nth-of-type(72) {
+    animation-delay: 1.42s;
+}
+
+.animate span:nth-of-type(73) {
+    animation-delay: 1.44s;
+}
+
+.animate span:nth-of-type(74) {
+    animation-delay: 1.46s;
+}
+
+.animate span:nth-of-type(75) {
+    animation-delay: 1.48s;
+}
+
+.animate span:nth-of-type(76) {
+    animation-delay: 1.50s;
+}
+
+.animate span:nth-of-type(77) {
+    animation-delay: 1.52s;
+}
+
+.animate span:nth-of-type(78) {
+    animation-delay: 1.54s;
+}
+
+.animate span:nth-of-type(79) {
+    animation-delay: 1.56s;
+}
+
+.animate span:nth-of-type(80) {
+    animation-delay: 1.58s;
+}
+
+.animate span:nth-of-type(81) {
+    animation-delay: 1.60s;
+}
+
+.animate span:nth-of-type(82) {
+    animation-delay: 1.62s;
+}
+
+.animate span:nth-of-type(83) {
+    animation-delay: 1.64s;
+}
+
+.animate span:nth-of-type(84) {
+    animation-delay: 1.68s;
+}
+
+.animate span:nth-of-type(85) {
+    animation-delay: 1.70s;
+} 
+
+.animate span {
+    opacity: 0;
+    animation: ballDrop .3s forwards;
+}
+
+@keyframes ballDrop {
+    60% {
+        transform: rotateY(-90deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1;
     }
 }

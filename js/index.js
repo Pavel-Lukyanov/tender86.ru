@@ -238,6 +238,66 @@ document.addEventListener("DOMContentLoaded", function () {
         }).catch((err) => alert('Ошибка! Попробуйте еще раз!')).finally(() => { form4.reset(), setIsDisabled2() })
     })
 
+
+    //Анимация букв в "Перечень оновных услуг"
+
+    let cardHeads = document.querySelectorAll('.animate');
+
+    function render() {
+        for (let cardHead of cardHeads) {
+            //записываем текст в массив и скрываем текст
+            let arr = cardHead.textContent.split('');
+            cardHead.innerHTML = '';
+            //С задержкой отрисовываем текст
+            setTimeout(() => {
+                for (let i = 0; i < arr.length; i++) {
+                    arr[i] = `<span>${arr[i]}</span>`;
+                    cardHead.innerHTML += arr[i];
+                }
+            }, 800);
+        }
+    }
+
+    //Получение координат элементов для запуска отрисовки
+
+    var elements = document.querySelectorAll('.animate');
+    let flag = 0;
+
+    for (let element of elements) {
+        var Visible = function (target) {
+            // Все позиции элемента
+            var targetPosition = {
+                top: window.pageYOffset + target.getBoundingClientRect().top,
+                bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+            },
+                // Получаем позиции окна
+                windowPosition = {
+                    top: window.pageYOffset,
+                    bottom: window.pageYOffset + document.documentElement.clientHeight
+                };
+
+            if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+                targetPosition.top < windowPosition.bottom) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+                // Если элемент полностью видно, то запускаем следующий код через флаг, чтобы при загрузке страницы анимация отработала 1 раз
+                if (flag != 1) {
+                    render();
+                    flag = 1
+                }
+            }
+        };
+
+        // Запускаем функцию при прокрутке страницы
+        window.addEventListener('scroll', function () {
+            Visible(element);
+        });
+
+        // А также запустим функцию сразу. А то вдруг, элемент изначально видно
+        Visible(element);
+
+    }
+
+
+
 });
 
 
