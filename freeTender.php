@@ -11,17 +11,18 @@ require 'PHPMailer/SMTP.php';
 $mail = new PHPMailer;
 $mail->isSMTP();
 //$mail -> SMTPDebug = SMTP :: DEBUG_SERVER ;                                    
-$mail->Host         = 'smtp.yandex.ru';
+$mail->Host         = 'smtp.mail.ru';
 $mail->SMTPAuth     = true;
-$mail->Username     = 'no-reply_tender86@mail.ru'; // Если почта для домена, то логин это полный адрес почты
-$mail->Password     = 'n31uoRyuATI%'; //пароль
+$mail->Username     = 'no-reply@супербаниидома.рф'; // Если почта для домена, то логин это полный адрес почты
+$mail->Password     = 'gtlr6432mtky'; //пароль
 $mail->SMTPSecure   = 'ssl';
 $mail->Port         = 465;
 
 // Авторизация
 $mail->CharSet = 'UTF-8';
-$mail->setFrom('no-reply_tender86@mail.ru'); //почта с которой производится отправка
+$mail->setFrom('no-reply@xn--80aabncua7afndnk2a.xn--p1ai'); //почта с которой производится отправка
 $mail->addAddress('lukyanov@a1-reklama.ru'); //Почта на которую производится отправка
+$mail->addAddress('tender_rus@list.ru'); //Почта на которую производится отправка
 
 // Контент                   
 $mail->isHTML(true);
