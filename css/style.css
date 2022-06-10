@@ -1375,6 +1375,10 @@ th {
 
 @media(max-width: 425px) {
 
+    .tarrifs h2 {
+        padding-top: 60px;
+    }
+
     .popup__form {
         width: auto;
     }
